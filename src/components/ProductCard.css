@@ -1,0 +1,75 @@
+/* Container card */
+.product-card {
+  border-radius: 30px !important;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+}
+
+/* Product Image */
+.product-image {
+  object-fit: contain;
+}
+
+/* Name */
+.product-name {
+  font-family: "Playfair Display", serif;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  color: #1c1c1c;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+}
+
+/* Description */
+.product-description {
+  font-size: 0.85rem;
+  color: #666;
+  line-height: 1.5;
+  font-weight: 300;
+  margin-bottom: 0.75rem;
+}
+
+/* Price */
+.product-price {
+  font-size: 1.05rem;
+  color: #1c1c1c;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-family: "Inter", sans-serif;
+  text-decoration: none;
+  letter-spacing: 0.4px;
+  transition: all 0.3s ease;
+}
+
+/* Button */
+.add-to-cart-btn {
+  background-color: transparent;
+  border: 1px solid #c5bcb2;
+  color: #c5bcb2;
+  padding: 8px 16px;
+  border-radius: 40px;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  width: 100%;
+  font-family: "Inter", sans-serif;
+  letter-spacing: 0.4px;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #baaea1;
+  color: #1c1c1c;
+}
+
+.add-to-cart-btn:active {
+  transform: scale(0.97);
+}

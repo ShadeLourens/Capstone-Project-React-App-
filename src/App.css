@@ -1,0 +1,57 @@
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #fffaf7;
+  color: #1c1c1c;
+  overflow-x: hidden;
+  text-align: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Playfair Display", serif;
+  letter-spacing: -0.5px;
+  font-weight: 600;
+}
+
+.transparent-navbar {
+  background-color: transparent !important;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+  padding-top: 1.5rem;
+}
+
+.navbar .nav-link {
+  color: #555;
+  font-weight: 500;
+}
+
+.navbar .nav-link:hover {
+  color: #1c1c1c;
+}
+
+.modal-content {
+  border-radius: 16px;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2);
+}
+
+.custom-login-btn {
+  color: #555 !important;
+  border: 1.5px solid #555 !important;
+  background: transparent;
+  border-radius: 30px;
+  padding: 6px 18px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.custom-login-btn:hover {
+  background: transparent;
+  color: #1c1c1c !important;
+  border: 1.5px solid #1c1c1c !important;
+}
