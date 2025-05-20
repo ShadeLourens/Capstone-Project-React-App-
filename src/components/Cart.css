@@ -4,15 +4,29 @@
   padding: 3rem 2rem;
   border-radius: 24px;
   box-shadow: 0 8px 40px rgba(0, 0, 0, 0.05);
-  margin-top: 6rem;
+  margin-top: 8rem;
+  margin-bottom: 5rem;
 }
 
 .cart-item:last-child {
   border-bottom: none;
 }
 
+.cart-item {
+  padding: 0.5rem;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.cart-item:hover {
+  background-color: #ededed !important;
+}
+
 .product-cart-name {
   font-family: "Playfair Display", serif;
+  max-width: 240px !important;
+  word-wrap: break-word !important;
+  white-space: normal !important;
   font-size: 1rem;
   font-weight: 600;
   letter-spacing: 0.4px;
@@ -41,5 +55,139 @@
   .cart-wrapper {
     margin-top: 7rem;
     padding: 2rem 1.5rem;
+  }
+}
+
+.checkout-btn {
+  background-color: #c5bcb2;
+  border: none;
+  color: white;
+  font-weight: 500;
+  padding: 10px 28px;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.checkout-btn:hover {
+  background-color: #baaea1;
+  color: #1c1c1c;
+}
+
+.empty-btn {
+  background: transparent;
+  color: #baaea1;
+  border: 1.5px solid #baaea1;
+  padding: 10px 24px;
+  border-radius: 30px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.empty-btn:hover {
+  background-color: #baaea1;
+  color: #1c1c1c;
+}
+
+.subtotal {
+  color: #555;
+  font-size: 0.95rem;
+  font-weight: 400;
+}
+
+.total {
+  color: #1c1c1c;
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+.remove-btn {
+  background: transparent;
+  border: none;
+  color: #555;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.remove-btn:hover {
+  color: #1c1c1c;
+}
+
+.shipping-section {
+  margin: 30px !important;
+}
+
+.shipping-info-btn {
+  background: none;
+  border: none;
+  color: #bfa290;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.shipping-info-btn:hover {
+  color: #a88f7e;
+}
+
+.form-select {
+  border-radius: 30px !important;
+}
+
+.cart-footer {
+  padding-top: 1.5rem;
+  border-top: 1px solid #eee;
+}
+
+.cart-footer .total {
+  margin-top: -0.5rem;
+}
+
+.shipping-help {
+  color: #9b9b9b;
+  font-family: "Inter", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 300;
+  margin-top: 50px !important;
+}
+
+@media (max-width: 768px) {
+  .shipping-section {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .shipping-form {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center;
+  }
+
+  .shipping-form .form-label,
+  .form-select,
+  .shipping-info-btn {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .cart-footer {
+    align-items: center;
+    margin-top: 2rem;
+  }
+
+  .cart-footer .d-flex {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .subtotal,
+  .total {
+    text-align: center;
+    margin-left: 50px !important;
   }
 }

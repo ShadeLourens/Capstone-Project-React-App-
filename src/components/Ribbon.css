@@ -1,0 +1,31 @@
+/* ribbon section */
+.ribbon {
+  background-color: #c5bcb2;
+  color: #555;
+  padding: 1rem 0rem 0rem;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 0.9rem;
+  font-weight: 500;
+  position: relative;
+}
+
+.ribbon-track {
+  display: inline-block;
+  width: 200%;
+  animation: scrollText 30s linear infinite;
+}
+
+.ribbon-content {
+  display: inline-block;
+  padding-left: 100%;
+}
+
+@keyframes scrollText {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

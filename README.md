@@ -1,12 +1,63 @@
-# React + Vite
+# My Online Store 🛍️
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project was created as part of a Capstone task to demonstrate my understanding of core React concepts. It uses **React + Vite**, and includes Redux for state management, React Router for navigation, and Formik for form validation.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## Expanding the ESLint configuration
+- User Registration with input validation (Formik)
+- Login with username stored in Redux
+- Modern, styled UI with interactive components
+- Navigation bar with links to different pages
+- Product listings rendered using `.map()`
+- Add-to-cart functionality with total price display
+- Redux-powered state for cart, user, and shipping
+- Shipping method selection and help text
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🚀 Getting Started
+
+To run the app locally:
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/ShadeLourens/Capstone-Project-React-App-.git
+   ```
+
+2. Navigate into the project folder:
+
+   ```bash
+   cd my-online-store
+   ```
+
+3. Install the node dependencies:
+
+   ```bash
+   npm install
+   ```
+
+4. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+> This project uses **Vite** for fast builds and a modern developer experience.
+
+---
+
+## 📝 Notes
+
+- Built as part of a learning journey to grow my React skills.
+- `node_modules` is excluded from the repository as per best practice.
+- Comments have been added to make the code easier for others to follow.
+
+---
+
+## 🙋‍♀️ About Me
+
+Hi! I'm Shade — a digital designer transitioning into front-end development. This project helped me practice building interactive UIs, working with Redux, and improving my coding confidence.
+
+---

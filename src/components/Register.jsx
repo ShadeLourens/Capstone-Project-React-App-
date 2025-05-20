@@ -1,10 +1,17 @@
-// Formik registration form
-// Displays errors on blur and shows alert on successful submission.
+// Register.jsx
+// Handles new user registration with Formik, validation, and a Bootstrap toast alert.
 import { useFormik } from "formik";
+import { useNavigate } from "react-router-dom";
+import { Toast, ToastContainer } from "react-bootstrap";
+import { useState } from "react";
 
 export default function Register() {
+  // Local state to show/hide success toast message
+  const [showToast, setShowToast] = useState(false);
+  const navigate = useNavigate();
+
+  // Formik setup: handles form state, validation, and submission
   const formik = useFormik({
-    // Sets up initial form for user registration
     initialValues: {
       firstName: "",
       surname: "",
@@ -12,8 +19,9 @@ export default function Register() {
       password: "",
       confirmPassword: "",
     },
+
+    // Basic form validation
     validate: (values) => {
-      // Custom validation for all fields (name length, email format, password rules)
       const errors = {};
 
       if (!values.firstName) {
@@ -55,16 +63,22 @@ export default function Register() {
 
       return errors;
     },
-    onSubmit: (values) => {
-      // Displays a success alert
-      alert("Registration successful 🎉");
-      console.log(values);
+
+    // Triggered on form submit
+    onSubmit: (values, { resetForm }) => {
+      setShowToast(true); // Shows a success toast
+      resetForm();
+      setTimeout(() => {
+        navigate("/login"); // Redirects after a short delay
+      }, 2000);
     },
   });
 
   return (
     <div className="container pt-5 mt-5" style={{ maxWidth: "500px" }}>
       <h1 className="text-center mb-4">Create Account</h1>
+
+      {/* Registration form */}
       <form onSubmit={formik.handleSubmit}>
         <div className="mb-3">
           <label htmlFor="firstName">First Name</label>
@@ -73,6 +87,7 @@ export default function Register() {
             id="firstName"
             name="firstName"
             type="text"
+            style={{ borderRadius: "20px" }}
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
             value={formik.values.firstName}
@@ -89,6 +104,7 @@ export default function Register() {
             id="surname"
             name="surname"
             type="text"
+            style={{ borderRadius: "20px" }}
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
             value={formik.values.surname}
@@ -105,6 +121,7 @@ export default function Register() {
             id="email"
             name="email"
             type="email"
+            style={{ borderRadius: "20px" }}
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
             value={formik.values.email}
@@ -121,6 +138,7 @@ export default function Register() {
             id="password"
             name="password"
             type="password"
+            style={{ borderRadius: "20px" }}
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
             value={formik.values.password}
@@ -137,6 +155,7 @@ export default function Register() {
             id="confirmPassword"
             name="confirmPassword"
             type="password"
+            style={{ borderRadius: "20px" }}
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
             value={formik.values.confirmPassword}
@@ -146,10 +165,27 @@ export default function Register() {
           )}
         </div>
 
-        <button type="submit" className="btn btn-dark w-100">
+        <button type="submit" className="hero-cta">
           Register
         </button>
       </form>
+
+      {/* Bootstrap success toast */}
+      <ToastContainer
+        position="middle-center"
+        className="custom-toast-container"
+      >
+        <Toast
+          onClose={() => setShowToast(false)}
+          show={showToast}
+          delay={2000}
+          autohide
+        >
+          <Toast.Body className="text-dark fw-semibold text-center">
+            You have registered successfully!
+          </Toast.Body>
+        </Toast>
+      </ToastContainer>
     </div>
   );
 }

@@ -1,6 +1,6 @@
 body {
   font-family: "Inter", sans-serif;
-  background-color: #fffaf7;
+  background-color: #f9f6f3;
   color: #1c1c1c;
   overflow-x: hidden;
   text-align: center;
@@ -13,8 +13,11 @@ h4,
 h5,
 h6 {
   font-family: "Playfair Display", serif;
-  letter-spacing: -0.5px;
+  font-size: 3.5rem;
   font-weight: 600;
+  color: #1c1c1c;
+  margin-bottom: 1rem;
+  letter-spacing: -0.5px;
 }
 
 .transparent-navbar {
@@ -54,4 +57,26 @@ h6 {
   background: transparent;
   color: #1c1c1c !important;
   border: 1.5px solid #1c1c1c !important;
+}
+
+/* Toasts */
+.custom-toast-container {
+  z-index: 9999;
+}
+
+.toast {
+  background-color: #eee7e2 !important;
+  color: #555 !important;
+  border-radius: 16px !important;
+  padding: 1rem 1.5rem !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1) !important;
+  font-family: "Inter", sans-serif !important;
+  max-width: 400px !important;
+  margin: 0 auto !important;
+}
+
+.toast-body {
+  font-size: 1rem !important;
+  font-weight: 500 !important;
+  text-align: center !important;
 }

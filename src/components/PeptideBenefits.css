@@ -1,0 +1,64 @@
+.accordion-button:focus {
+  box-shadow: none !important;
+  border-color: transparent !important;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #c5bcb2 !important;
+  color: #555 !important;
+  font-family: "Inter", sans-serif !important;
+  font-size: 1.1rem !important;
+  font-weight: 300 !important;
+  color: #555 !important;
+}
+
+.accordion-button {
+  background-color: transparent !important;
+  font-family: "Inter", sans-serif !important;
+  font-size: 1.1rem !important;
+  font-weight: 300 !important;
+  color: #555 !important;
+}
+
+.accordion-item {
+  border: none !important;
+  border-bottom: 1px solid #c5bcb2 !important;
+  background-color: transparent !important;
+  color: #555 !important;
+}
+
+.accordion-body {
+  font-family: "Inter", sans-serif !important;
+  font-weight: 200 !important;
+  font-size: 1rem !important;
+  color: #555 !important;
+  line-height: 1.6 !important;
+  padding: 2rem !important;
+  border-top: 1px solid #c5bcb2 !important;
+}
+
+.why-img {
+  max-width: 300px !important;
+  height: auto !important;
+  border-radius: 12px !important;
+  margin: 0 auto !important;
+  display: block !important;
+}
+
+.peptide-heading {
+  margin-top: 80px;
+}
+
+@media (max-width: 800px) {
+  .why-img {
+    margin-bottom: 40px !important;
+    max-width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .accordion-section {
+    margin-top: 30px !important;
+  }
+}

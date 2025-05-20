@@ -1,4 +1,7 @@
 // App.jsx
+// Entry point of the application UI. Defines routes and persistent layout elements.
+
+// React Router imports to handle page navigation
 import { Routes, Route } from "react-router-dom";
 
 // Core layout and pages
@@ -8,29 +11,30 @@ import Products from "./components/Products";
 import Login from "./components/Login";
 import Register from "./components/Register";
 import Cart from "./components/Cart";
+import Footer from "./components/Footer";
 
-// Styles
+// Global styles and Bootstrap for layout & components
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
+// Main App component
 export default function App() {
   return (
     <>
-      {/* Navbar is always visible on all routes */}
+      {/* Navbar remains visible across all routes */}
       <Navbar />
 
-      {/* Define client-side routes */}
+      {/* Define all available routes/pages */}
       <Routes>
         <Route path="/" element={<Home />} />
-
         <Route path="/products" element={<Products />} />
-
-        <Route path="/cart" element={<Cart />} />
-
         <Route path="/login" element={<Login />} />
-
         <Route path="/register" element={<Register />} />
+        <Route path="/cart" element={<Cart />} />
       </Routes>
+
+      {/* Footer stays at the bottom of all pages */}
+      <Footer />
     </>
   );
 }
